@@ -434,20 +434,12 @@ app.get('/api/dev/status', async (req, res) => {
 // INICIAR SERVIDOR
 // ============================================
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log('='.repeat(50));
   console.log('🚀 SERVIDOR INICIADO (MODO DEV - SEM CRIPTOGRAFIA)');
   console.log('='.repeat(50));
   console.log(`📍 Porta: ${PORT}`);
-  console.log(`🌐 URL: http://localhost:${PORT}`);
+  console.log(`🌐 URL: https://voucher-backend.cleverapps.io`);
   console.log(`🕒 ${new Date().toLocaleString()}`);
-  console.log('='.repeat(50));
-  console.log('🔓 CREDENCIAIS PARA LOGIN:');
-  console.log('   1. master / Master@123');
-  console.log('   2. admin / admin123');
-  console.log('   3. funcionario / func123');
-  console.log('='.repeat(50));
-  console.log('⚠️  AVISO: Sistema em MODO DESENVOLVIMENTO');
-  console.log('   Senhas estão em TEXTO PURO no banco!');
   console.log('='.repeat(50));
 });
