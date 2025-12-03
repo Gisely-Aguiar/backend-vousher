@@ -23,12 +23,7 @@ const pool = mysql.createPool({
 
 const JWT_SECRET = process.env.JWT_SECRET || 'sua_chave_secreta_super_segura_2024';
 
-app.use(cors({
-  origin: ['http://localhost:5173', process.env.FRONT_URL, '*', https://fornt-vousher1.vercel.app/],
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
+app.use(cors());
 app.use(express.json());
 
 // Middleware de autenticação
@@ -443,5 +438,6 @@ app.listen(PORT, '0.0.0.0', () => {
   console.log(`🕒 ${new Date().toLocaleString()}`);
   console.log('='.repeat(50));
 });
+
 
 
